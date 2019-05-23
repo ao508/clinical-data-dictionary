@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Memorial Sloan-Kettering Cancer Center.
+ * Copyright (c) 2019 Memorial Sloan-Kettering Cancer Center.
  *
  * This library is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY, WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS
@@ -13,17 +13,25 @@
  * Center has been advised of the possibility of such damage.
  */
 
-package org.cbioportal.cdd.repository;
+package org.cbioportal.cdd;
 
-import java.util.List;
-
-import org.cbioportal.cdd.model.ClinicalAttributeMetadata;
-import java.util.*;
+import org.cbioportal.cdd.config.CDDAppConfig;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+//import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @author Manda Wilson
+ *
+ * @author ochoaa
  */
-public interface ClinicalAttributeMetadataRepository {
-    ArrayList<ClinicalAttributeMetadata> getClinicalAttributeMetadata();
-    Map<String, ArrayList<ClinicalAttributeMetadata>> getClinicalAttributeMetadataOverrides();
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes={CDDAppConfig.class})
+//@TestPropertySource("classpath:application.properties")
+public class TestClinicalDataDictionaryApplication {
+    @Test
+    public void testDefault() {
+        System.out.println("PLACEHOLDER TEST");
+    }
 }
